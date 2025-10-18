@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+if command -v gradle >/dev/null 2>&1; then
+  exec gradle "$@"
+else
+  echo "Gradle is required to run this project. Install Gradle or use the Gradle Wrapper." >&2
+  exit 1
+fi
